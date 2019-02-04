@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import 'bulma'
 
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import {BrowserRouter, Route, Link, Switch} from 'react-router-dom'
 
 import DrinksIndex from './components/DrinksIndex'
 import DrinksNew from './components/DrinksNew'
@@ -14,12 +14,25 @@ class App extends React.Component {
   render() {
     return(
       <BrowserRouter>
-        <Switch>
-          <Route path="/drinks/new" component={DrinksNew} />
-          <Route path="/drinks" component={DrinksIndex} />
-          <Route path="/" component={Home} />
+        <main>
 
-        </Switch>
+          <nav className="navbar is-primary">
+            <div className="container">
+              <div className="navbar-start">
+                <Link className="links" to="/"> Home </Link>
+                <Link className="links" to="/drinks"> Drinks </Link>
+                <Link className="links" to="/drinks/new"> Add Drink </Link>
+              </div>
+            </div>
+          </nav>
+
+          <Switch>
+            <Route path="/drinks/new" component={DrinksNew} />
+            <Route path="/drinks" component={DrinksIndex} />
+            <Route path="/" component={Home} />
+
+          </Switch>
+        </main>
       </BrowserRouter>
 
     )
