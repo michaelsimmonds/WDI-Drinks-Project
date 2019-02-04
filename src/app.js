@@ -17,6 +17,7 @@ class App extends React.Component {
         <Switch>
           <Route path="/drinks/new" component={DrinksNew} />
           <Route path="/drinks" component={DrinksIndex} />
+          <Route path="/" component={DrinksIndex} />
 
         </Switch>
       </BrowserRouter>
