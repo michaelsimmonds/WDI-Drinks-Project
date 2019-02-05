@@ -10,7 +10,7 @@ class Home extends React.Component {
     return(
       <main className="section">
         <div className="container">
-          <h1>Hello world</h1>
+          <h1>Welcome to the site. Continue to add a drink to a list of drinks!</h1>
         </div>
       </main>
     )
